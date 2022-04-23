@@ -47,7 +47,7 @@ namespace CSM.Panels
             relativePosition = PanelManager.GetCenterPosition(this);
 
             // Title Label
-            this.CreateTitleLabel("Host Server", new Vector2(120, -20));
+            this.CreateTitleLabel(Language.HostServer, new Vector2(120, -20));
 
             // Port Label
             this.CreateLabel("Port:", new Vector2(10, -65));
@@ -56,16 +56,16 @@ namespace CSM.Panels
             _portField.numericalOnly = true;
 
             // Password label
-            this.CreateLabel("Password (Optional):", new Vector2(10, -145));
+            this.CreateLabel(Language.Password, new Vector2(10, -145));
             // Password checkbox
-            _passwordBox = this.CreateCheckBox("Show Password", new Vector2(10, -170));
+            _passwordBox = this.CreateCheckBox(Language.ShowPassword, new Vector2(10, -170));
             _passwordBox.isChecked = false;
             // Password field
             _passwordField = this.CreateTextField(_serverConfig.Password, new Vector2(10, -190));
             _passwordField.isPasswordField = true;
 
             // Username label
-            this.CreateLabel("Username:", new Vector2(10, -245));
+            this.CreateLabel(Language.Username, new Vector2(10, -245));
             // Username field
             _usernameField = this.CreateTextField(_serverConfig.Username, new Vector2(10, -270));
             if (PlatformService.active && PlatformService.personaName != null && _serverConfig.Username == "")
@@ -74,7 +74,7 @@ namespace CSM.Panels
             }
 
             // Remember-Me box
-            _rememberBox = this.CreateCheckBox("Remember Me", new Vector2(10, -325));
+            _rememberBox = this.CreateCheckBox(Language.RememberMe, new Vector2(10, -325));
             _rememberBox.isChecked = _hasRemembered;
 
             _connectionStatus = this.CreateLabel("", new Vector2(10, -350));
@@ -93,11 +93,11 @@ namespace CSM.Panels
             _externalIp.textAlignment = UIHorizontalAlignment.Center;
 
             // Create Server Button
-            _createButton = this.CreateButton("Create Server", new Vector2(10, -445));
+            _createButton = this.CreateButton(Language.CreateServer, new Vector2(10, -445));
             _createButton.eventClick += OnCreateServerClick;
 
             // Close this dialog
-            _closeButton = this.CreateButton("Cancel", new Vector2(10, -515));
+            _closeButton = this.CreateButton(Language.Cancel, new Vector2(10, -515));
             _closeButton.eventClick += (component, param) =>
             {
                 isVisible = false;

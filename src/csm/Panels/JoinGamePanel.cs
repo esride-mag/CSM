@@ -46,10 +46,10 @@ namespace CSM.Panels
             relativePosition = PanelManager.GetCenterPosition(this);
 
             // Title Label
-            this.CreateTitleLabel("Connect to Server", new Vector2(80, -20));
+            this.CreateTitleLabel(Language.ConnectToServer, new Vector2(80, -20));
 
             // IP Address Label
-            this.CreateLabel("IP Address:", new Vector2(10, -70));
+            this.CreateLabel(Language.IPAddress, new Vector2(10, -70));
 
             // IP Address field
             _ipAddressField = this.CreateTextField(_clientConfig.HostAddress, new Vector2(10, -100));
@@ -62,7 +62,7 @@ namespace CSM.Panels
             _portField.numericalOnly = true;
 
             // Username label
-            this.CreateLabel("Username:", new Vector2(10, -230));
+            this.CreateLabel(Language.Username, new Vector2(10, -230));
 
             // Username field
             _usernameField = this.CreateTextField(_clientConfig.Username, new Vector2(10, -260));
@@ -72,10 +72,10 @@ namespace CSM.Panels
             }
 
             // Password label
-            this.CreateLabel("Password:", new Vector2(10, -310));
+            this.CreateLabel(Language.Password, new Vector2(10, -310));
 
             // Password checkbox
-            _passwordBox = this.CreateCheckBox("Show Password", new Vector2(120, -310));
+            _passwordBox = this.CreateCheckBox(Language.ShowPassword, new Vector2(120, -310));
 
             _passwordBox.eventClicked += (component, param) =>
             {
@@ -87,22 +87,22 @@ namespace CSM.Panels
             _passwordField.isPasswordField = true;
 
             // Remember-Me checkbox
-            _rememberBox = this.CreateCheckBox("Remember Me", new Vector2(10, -390));
+            _rememberBox = this.CreateCheckBox(Language.RememberMe, new Vector2(10, -390));
             _rememberBox.isChecked = _hasRemembered;
 
             // Connect to Server Button
-            _connectButton = this.CreateButton("Connect to Server", new Vector2(10, -445));
+            _connectButton = this.CreateButton(Language.ConnectToServer, new Vector2(10, -445));
             _connectButton.eventClick += OnConnectButtonClick;
 
             // Close this dialog
-            _closeButton = this.CreateButton("Cancel", new Vector2(10, -515));
+            _closeButton = this.CreateButton(Language.Cancel, new Vector2(10, -515));
             _closeButton.eventClick += (component, param) =>
             {
                 isVisible = false;
                 MultiplayerManager.Instance.CurrentClient.StopMainMenuEventProcessor();
             };
 
-            _connectionStatus = this.CreateLabel("Not Connected", new Vector2(10, -420));
+            _connectionStatus = this.CreateLabel(Language.NotConnected, new Vector2(10, -420));
             _connectionStatus.textAlignment = UIHorizontalAlignment.Center;
             _connectionStatus.textColor = new Color32(255, 0, 0, 255);
 
@@ -125,12 +125,12 @@ namespace CSM.Panels
             MultiplayerManager.Instance.CurrentClient.StartMainMenuEventProcessor();
 
             _connectionStatus.textColor = new Color32(255, 255, 0, 255);
-            _connectionStatus.text = "Connecting...";
+            _connectionStatus.text = Language.Connecting;
 
             if (string.IsNullOrEmpty(_portField.text) || string.IsNullOrEmpty(_ipAddressField.text))
             {
                 _connectionStatus.textColor = new Color32(255, 0, 0, 255);
-                _connectionStatus.text = "Invalid Port or IP";
+                _connectionStatus.text = Language.InvalidPortOrIp;
                 return;
             }
 

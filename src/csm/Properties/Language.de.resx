@@ -1,0 +1,62 @@
+﻿<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="JoinGame" xml:space="preserve">
+    <value>Spiel beitreten</value>
+  </data>
+  <data name="Multiplayer" xml:space="preserve">
+    <value>Mehrspieler</value>
+  </data>
+  <data name="StopServer" xml:space="preserve">
+    <value>Server stoppen</value>
+  </data>
+  <data name="Disconnect" xml:space="preserve">
+    <value>Verbindung trennen</value>
+  </data>
+  <data name="HostServer" xml:space="preserve">
+    <value>Server hosten</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Passwort (optional):</value>
+  </data>
+  <data name="ShowPassword" xml:space="preserve">
+    <value>Passwort anzeigen</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Benutzername:</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>Login merken</value>
+  </data>
+  <data name="CreateServer" xml:space="preserve">
+    <value>Server anlegen</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Abbruch</value>
+  </data>
+  <data name="ConnectToServer" xml:space="preserve">
+    <value>Mit Server verbinden</value>
+  </data>
+  <data name="IPAddress" xml:space="preserve">
+    <value>IP Adresse:</value>
+  </data>
+  <data name="NotConnected" xml:space="preserve">
+    <value>Nicht verbunden</value>
+  </data>
+  <data name="Connecting" xml:space="preserve">
+    <value>Verbinden...</value>
+  </data>
+  <data name="InvalidPortOrIp" xml:space="preserve">
+    <value>Ungültige IP oder Port</value>
+  </data>
+</root>

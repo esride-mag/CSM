@@ -100,13 +100,13 @@ namespace CSM.Panels
             {
                 Show(_serverManageButton);
 
-                _disconnectButton.text = "Stop server";
+                _disconnectButton.text = Language.StopServer;
             }
             else if (MultiplayerManager.Instance.CurrentRole == MultiplayerRole.Client)
             {
                 Hide(_serverManageButton);
 
-                _disconnectButton.text = "Disconnect";
+                _disconnectButton.text = Language.Disconnect;
             }
         }
 

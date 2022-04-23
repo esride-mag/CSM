@@ -1,6 +1,7 @@
 ﻿using ColossalFramework.UI;
 using CSM.API;
 using CSM.Panels;
+using CSM.Properties;
 using HarmonyLib;
 using UnityEngine;
 
@@ -45,7 +46,7 @@ namespace CSM.Injections
             }
 
             joinGameButton.name = "JoinGame";
-            joinGameButton.text = "JOIN GAME";
+            joinGameButton.text = Language.JoinGame;
             joinGameButton.width = 411;
             joinGameButton.height = 56;
 

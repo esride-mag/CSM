@@ -84,7 +84,7 @@ namespace CSM.Injections
 
             // Set multiplayer button properties.
             _multiplayerButton.name = "Multiplayer";
-            _multiplayerButton.text = "MULTIPLAYER";
+            _multiplayerButton.text = Language.Multiplayer;
             _multiplayerButton.width = 310;
             _multiplayerButton.height = 57;
             _multiplayerButton.textScale = 1.25f;
